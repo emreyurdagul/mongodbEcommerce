@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class Product {
     @Id
     private String id; // MongoDB document ID
     private String title;
+    @Field(name = "category_id")
     private Integer categoryId;
     private String url;
     private Double price;
